@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:active,
+:hover,
+:focus{
+    outline: none !important;
+    outline-offset: 0;
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+ul, ol{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 100%;
+    font-weight: 400;
+}
+
+::-webkit-scrollbar{
+    width: 0.625rem;
+}
+
+::-webkit-scrollbar-track{
+    background: rgb(226, 223, 223);
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(168, 167, 167);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: gray;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.clip-path{
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+}
+
+.shrink {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 8px 0 !important;
+    box-shadow: 1px 2px 2px 0 rgb(14 44 54 /15%);;
+}
+
+section.hero{
+    @apply block md:grid;
+    grid-template-columns: .4fr .6fr;
+}
+
+.separator {
+    @apply h-[3px] bg-primary;
+}
+
+.paragraph {
+    @apply text-gray-500 text-sm leading-5;
+}
+
+.btn {
+    @apply inline-block text-sm md:text-base font-semibold py-2 md:py-3 px-6 md:px-8 capitalize text-center cursor-pointer ease-linear duration-200;
+}
+
+.card_shadow{
+    box-shadow: 1px 2px 11px 4px rgb(14 44 54 /15%);
+}
+
+.slick-slide > div {
+    margin: 0 10px;
+    padding: .5rem 0;
+  }
+  .slick-list {
+    margin: 0 -10px;
+}
+
+@layer utilities {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+}
+
+/* //1024, 991, 767, 330 */
+
